@@ -1,5 +1,7 @@
 import { FC, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { IoBookOutline } from "react-icons/io5";
+import imgbook from "../assets/book.svg";
 
 interface NavBarProps {
   onMenuClick: () => void;
@@ -38,8 +40,8 @@ const NavBar: FC<NavBarProps> = ({ onMenuClick }: NavBarProps) => {
         {/* Logo/Home Link */}
         <div className="flex items-center">
           <Link to="/" className="flex items-center">
-            <img src="/logo.svg" alt="Logo" className="h-8 w-8 mr-3" />
-            <span className="text-xl font-bold">Your Docs</span>
+            <img src={imgbook} alt="Logo" className="h-8 w-8 mr-3" />
+            <span className="text-xl font-bold">Lil Learning</span>
           </Link>
         </div>
 
@@ -120,7 +122,7 @@ const NavBar: FC<NavBarProps> = ({ onMenuClick }: NavBarProps) => {
 
           {/* GitHub Link */}
           <a
-            href="https://github.com/yourusername/yourrepo"
+            href="https://github.com/achmadghozy"
             target="_blank"
             rel="noopener noreferrer"
             className="p-2 rounded-lg hover:bg-gray-100"

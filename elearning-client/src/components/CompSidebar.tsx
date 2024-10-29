@@ -46,7 +46,7 @@ const Sidebar = ({ items, currentPath, onLinkClick }: SidebarProps) => {
           <span className="text-gray-600">v1.0.0</span>
           <span className="text-gray-300">|</span>
           <a
-            href="https://github.com/your-repo"
+            href="https://github.com/achmadghozy"
             target="blank"
             rel="noopener noreferrer"
             className="text-gray-600 hover:text-gray-900"

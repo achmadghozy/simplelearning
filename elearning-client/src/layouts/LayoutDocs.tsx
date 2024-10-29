@@ -49,23 +49,15 @@ const DocsLayout = () => {
       items: [
         { title: "Introduction", href: "/docs/introduction" },
         { title: "Quick Start", href: "/docs/getting-started" },
-        { title: "Installation", href: "/docs/installation" },
+        { title: "Enrollment", href: "/docs/installation" },
       ],
     },
     {
-      title: "Components",
+      title: "Material",
       items: [
         { title: "Button", href: "/docs/components/button" },
         { title: "Card", href: "/docs/components/card" },
         { title: "Input", href: "/docs/components/input" },
-      ],
-    },
-    {
-      title: "Guides",
-      items: [
-        { title: "Theming", href: "/docs/guides/theming" },
-        { title: "Styling", href: "/docs/guides/styling" },
-        { title: "Accessibility", href: "/docs/guides/accessibility" },
       ],
     },
   ];
@@ -128,7 +120,7 @@ const DocsLayout = () => {
             {/* Footer */}
             <footer className="mt-16 border-t border-gray-200 py-8">
               <div className="text-sm text-gray-500">
-                <p>© 2024 AtomicUI. All rights reserved.</p>
+                <p>All rights reserved.</p>
                 <p className="mt-2">
                   Need help?{" "}
                   <a
