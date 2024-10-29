@@ -1,9 +1,14 @@
-import { useEffect, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-const NavBar = () => {
+interface NavBarProps {
+  onMenuClick: () => void;
+}
+
+const NavBar: FC<NavBarProps> = ({ onMenuClick }: NavBarProps) => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
