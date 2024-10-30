@@ -47,9 +47,8 @@ const DocsLayout = () => {
     {
       title: "Getting Started",
       items: [
-        { title: "Introduction", href: "/docs/introduction" },
-        { title: "Quick Start", href: "/docs/getting-started" },
-        { title: "Enrollment", href: "/docs/installation" },
+        { title: "Introduction", href: "/docs/getting-started" },
+        { title: "Enrollment", href: "/docs/enrollment" },
       ],
     },
     {

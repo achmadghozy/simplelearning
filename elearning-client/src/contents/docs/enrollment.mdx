@@ -1,0 +1,124 @@
+import { Link } from 'react-router-dom'
+
+<div className="container mx-auto px-4 py-8 max-w-3xl">
+  <h1 className="text-4xl font-bold text-gray-800 mb-6">
+    Enroll in EduConnect 🎓
+  </h1>
+
+  <div className="bg-gradient-to-br from-indigo-50 to-blue-50 p-6 rounded-xl mb-8">
+    <h2 className="text-2xl font-semibold text-indigo-600 mb-4">
+      What You'll Get
+    </h2>
+    
+    <div className="space-y-4">
+      <div className="flex items-start">
+        <svg className="w-6 h-6 text-indigo-500 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <span className="text-gray-700">
+          <strong>Full Course Access:</strong> Immediate access to all course materials, lectures, and resources
+        </span>
+      </div>
+      
+      <div className="flex items-start">
+        <svg className="w-6 h-6 text-indigo-500 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <span className="text-gray-700">
+          <strong>Interactive Learning Tools:</strong> Access to quizzes, assignments, and practice exercises
+        </span>
+      </div>
+      
+      <div className="flex items-start">
+        <svg className="w-6 h-6 text-indigo-500 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <span className="text-gray-700">
+          <strong>Progress Tracking:</strong> Personal dashboard to monitor your learning journey
+        </span>
+      </div>
+      
+      <div className="flex items-start">
+        <svg className="w-6 h-6 text-indigo-500 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <span className="text-gray-700">
+          <strong>Community Access:</strong> Join discussion forums and study groups
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div className="bg-white shadow-md rounded-xl p-6 mb-8">
+    <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+      Enrollment Process
+    </h2>
+    
+    <div className="space-y-6">
+      <div className="flex items-center">
+        <div className="flex-shrink-0 w-8 h-8 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold">
+          1
+        </div>
+        <div className="ml-4">
+          <h3 className="font-medium text-gray-800">Register with Email</h3>
+          <p className="text-gray-600">Fill out the registration form with your email and personal details</p>
+        </div>
+      </div>
+
+      <div className="flex items-center">
+        <div className="flex-shrink-0 w-8 h-8 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold">
+          2
+        </div>
+        <div className="ml-4">
+          <h3 className="font-medium text-gray-800">Verification Email</h3>
+          <p className="text-gray-600">Check your inbox for a verification email from our team</p>
+        </div>
+      </div>
+
+      <div className="flex items-center">
+        <div className="flex-shrink-0 w-8 h-8 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold">
+          3
+        </div>
+        <div className="ml-4">
+          <h3 className="font-medium text-gray-800">Enrollment Review</h3>
+          <p className="text-gray-600">Our team will review your application within 24-48 hours</p>
+        </div>
+      </div>
+
+      <div className="flex items-center">
+        <div className="flex-shrink-0 w-8 h-8 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold">
+          4
+        </div>
+        <div className="ml-4">
+          <h3 className="font-medium text-gray-800">Confirmation</h3>
+          <p className="text-gray-600">Receive confirmation email with login credentials and getting started guide</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div className="bg-indigo-50 rounded-xl p-6 mb-8">
+    <h2 className="text-xl font-semibold text-gray-800 mb-3">
+      Important Notes:
+    </h2>
+    <ul className="list-disc list-inside space-y-2 text-gray-700">
+      <li>Please use a valid email address that you check regularly</li>
+      <li>Check your spam folder if you don't receive our emails</li>
+      <li>Enrollment confirmation typically takes 24-48 hours</li>
+      <li>You'll get immediate access once your enrollment is confirmed</li>
+    </ul>
+  </div>
+
+  <div className="text-center">
+    <Link 
+      to="/register" 
+      className="inline-block px-8 py-4 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 transition-colors duration-300 transform hover:scale-105"
+    >
+      Start Registration 🚀
+    </Link>
+    
+    <p className="mt-4 text-gray-600">
+      Need help? <Link to="/contact" className="text-indigo-600 hover:text-indigo-700 font-medium">Contact our support team</Link>
+    </p>
+  </div>
+</div>

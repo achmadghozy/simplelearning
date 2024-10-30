@@ -1,7 +1,139 @@
-# Hello, world!
+import { Link } from "react-router-dom";
 
-Below is an example of markdown in JSX.
+<div className="container mx-auto px-4 py-8 max-w-4xl">
+  <h1 className="text-4xl font-bold text-gray-800 mb-6">
+    Welcome to Elearning! 👋
+  </h1>
 
-<div style={{ backgroundColor: "tomato", padding: "1rem" }}>
-  Try and change the background color to `tomato`.
+{" "}
+<h2 className="text-2xl font-semibold text-indigo-600 mb-8">
+  All the materials you need to excel at your job
+</h2>
+
+{" "}
+<p className="text-lg text-gray-600 mb-8">
+  Whether you're a student eager to learn or a teacher passionate about sharing
+  knowledge, we're thrilled to have you here at EduConnect.
+</p>
+
+  <section className="mb-12">
+    <h3 className="text-xl font-semibold text-gray-800 mb-4">
+      For Students 📚
+    </h3>
+
+    <div className="bg-white p-6 rounded-lg shadow-md mb-8">
+      <h4 className="font-medium mb-4">Transform your learning journey with:</h4>
+      <ul className="space-y-2">
+        <li className="flex items-center">
+          <span className="text-indigo-500 mr-2">•</span>
+          <span className="text-gray-700"><strong>Interactive Lessons</strong> - Engage with dynamic content</span>
+        </li>
+        <li className="flex items-center">
+          <span className="text-indigo-500 mr-2">•</span>
+          <span className="text-gray-700"><strong>Self-paced Learning</strong> - Study at your own comfort</span>
+        </li>
+        <li className="flex items-center">
+          <span className="text-indigo-500 mr-2">•</span>
+          <span className="text-gray-700"><strong>Real-time Progress Tracking</strong> - Monitor your growth</span>
+        </li>
+        <li className="flex items-center">
+          <span className="text-indigo-500 mr-2">•</span>
+          <span className="text-gray-700"><strong>Direct Teacher Support</strong> - Get help when you need it</span>
+        </li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section className="mb-12">
+    <h3 className="text-xl font-semibold text-gray-800 mb-4">
+      For Teachers 👩‍🏫
+    </h3>
+
+    <div className="bg-white p-6 rounded-lg shadow-md mb-8">
+      <h4 className="font-medium mb-4">Empower your teaching with:</h4>
+      <ul className="space-y-2">
+        <li className="flex items-center">
+          <span className="text-indigo-500 mr-2">•</span>
+          <span className="text-gray-700"><strong>Course Management Tools</strong> - Organize your content effortlessly</span>
+        </li>
+        <li className="flex items-center">
+          <span className="text-indigo-500 mr-2">•</span>
+          <span className="text-gray-700"><strong>Student Progress Analytics</strong> - Track learning outcomes</span>
+        </li>
+        <li className="flex items-center">
+          <span className="text-indigo-500 mr-2">•</span>
+          <span className="text-gray-700"><strong>Interactive Assessment Tools</strong> - Create engaging evaluations</span>
+        </li>
+        <li className="flex items-center">
+          <span className="text-indigo-500 mr-2">•</span>
+          <span className="text-gray-700"><strong>Communication Platform</strong> - Connect with students seamlessly</span>
+        </li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section className="mb-12">
+    <h2 className="text-2xl font-semibold text-gray-800 mb-6">
+      How We Help
+    </h2>
+
+    <div className="bg-indigo-50 p-6 rounded-lg mb-8">
+      <h4 className="font-medium mb-4">Our platform streamlines your daily educational tasks:</h4>
+      <ul className="space-y-3">
+        <li className="flex items-center">
+          <svg className="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span>Access course materials anytime, anywhere</span>
+        </li>
+        <li className="flex items-center">
+          <svg className="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span>Submit and grade assignments digitally</span>
+        </li>
+        <li className="flex items-center">
+          <svg className="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span>Schedule and attend virtual sessions</span>
+        </li>
+        <li className="flex items-center">
+          <svg className="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span>Collaborate on projects in real-time</span>
+        </li>
+        <li className="flex items-center">
+          <svg className="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span>Track deadlines and important dates</span>
+        </li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section className="mb-12">
+    <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+      Ready to Begin?
+    </h2>
+
+    <p className="text-lg text-gray-600 mb-6">
+      Don't miss out on this opportunity to enhance your educational journey!
+    </p>
+
+    <div className="text-center">
+      <Link
+        to="/enroll"
+        className="inline-block px-8 py-4 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 transition-colors duration-300 transform hover:scale-105"
+      >
+        Enroll Now 🚀
+      </Link>
+    </div>
+
+  </section>
 </div>
