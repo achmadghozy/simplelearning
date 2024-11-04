@@ -7,6 +7,7 @@ import Enrollment from "./contents/docs/enrollment.mdx";
 import Registration from "./pages/PageReg";
 import StudentDashboard from "./pages/PageStudentDashboard";
 import TeacherDashboard from "./pages/PageTeacherDashboard";
+import Examination from "./pages/PageExam";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
             path="/teacherdashboard"
             element={<TeacherDashboard />}
           ></Route>
+          <Route path="/examination" element={<Examination />}></Route>
         </Routes>
       </BrowserRouter>
     </MDXProvider>

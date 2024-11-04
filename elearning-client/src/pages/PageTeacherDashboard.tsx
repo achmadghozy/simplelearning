@@ -1,5 +1,12 @@
 import { FC } from "react";
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
+import {
+  Chart as ChartJS,
+  ArcElement,
+  Tooltip,
+  Legend,
+  BarController,
+  BarElement,
+} from "chart.js";
 import { Line, Bar } from "react-chartjs-2";
 import {
   courseData,
@@ -8,7 +15,7 @@ import {
 } from "../dummydata/teacherDummy";
 import { Student } from "../types/teacher";
 
-ChartJS.register(ArcElement, Tooltip, Legend);
+ChartJS.register(ArcElement, Tooltip, Legend, BarController, BarElement);
 
 const TeacherDashboard: FC = () => {
   // Chart data for weekly engagement
