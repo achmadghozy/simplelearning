@@ -11,14 +11,10 @@ const courseSchema = new mongoose.Schema({
     type: String,
     required: [true, 'Please add a description']
   },
-  instructor: {
+  teacher: {
     type: mongoose.Schema.ObjectId,
     ref: 'User',
     required: true
-  },
-  price: {
-    type: Number,
-    required: [true, 'Please add a price']
   },
   thumbnail: {
     type: String,
@@ -29,32 +25,10 @@ const courseSchema = new mongoose.Schema({
     required: [true, 'Please add a category'],
     enum: ['programming', 'design', 'business', 'marketing', 'other']
   },
-  level: {
-    type: String,
-    required: [true, 'Please add a difficulty level'],
-    enum: ['beginner', 'intermediate', 'advanced']
-  },
-  lessons: [{
-    type: mongoose.Schema.ObjectId,
-    ref: 'Lesson'
-  }],
   enrolledStudents: [{
     type: mongoose.Schema.ObjectId,
-    ref: 'User'
+    ref: 'Student'
   }],
-  rating: {
-    type: Number,
-    min: [1, 'Rating must be at least 1'],
-    max: [5, 'Rating must not be more than 5']
-  },
-  numberOfReviews: {
-    type: Number,
-    default: 0
-  },
-  isPublished: {
-    type: Boolean,
-    default: false
-  }
 }, {
   timestamps: true,
   toJSON: { virtuals: true },

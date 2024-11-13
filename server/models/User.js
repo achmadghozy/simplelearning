@@ -1,56 +1,49 @@
 const mongoose = require('mongoose');
-const bcrypt = require('bcryptjs');
+const bcrypt = require (`bcryptjs`)
 
 const userSchema = new mongoose.Schema({
   name: {
     type: String,
-    required: [true, 'Please add a name'],
-    trim: true
+    required: true,
   },
-  email: {
-    type: String,
-    required: [true, 'Please add an email'],
-    unique: true,
-    lowercase: true
+  employeeId: {
+    type: Number,
+    required: true,
   },
-  password: {
+  email:{
     type: String,
-    required: [true, 'Please add a password'],
-    minlength: 6,
-    select: false
+    required: true,
   },
   role: {
     type: String,
-    enum: ['student', 'teacher', 'admin'],
-    default: 'student'
+    enum: [`student`, `teacher`, `admin`],
+    default: `student`,
   },
-  profilePicture: {
-    type: String,
-    default: 'default.jpg'
-  },
-  bio: String,
-  specialization: [String], // For teachers
-  enrolledCourses: [{
-    type: mongoose.Schema.ObjectId,
-    ref: 'Course'
-  }],
   createdAt: {
     type: Date,
-    default: Date.now
+    default: Date.now,
+  },
+  dispPicture: {
+    type: String,
+    required: true
+  },
+  password: {
+    type: String,
+    required: [true, `Please add password`],
+    select: false
   },
   resetPasswordToken: String,
-  resetPasswordExpire: Date
+  resetPasswordExpire: Date,
 }, {
   timestamps: true
 });
 
-// Encrypt password
-userSchema.pre('save', async function(next) {
-  if (!this.isModified('password')) {
+userSchema.pre(`save`, async function(next) {
+  if (!this.isModified(`password`)) {
     next();
   }
   const salt = await bcrypt.genSalt(10);
   this.password = await bcrypt.hash(this.password, salt);
 });
 
-module.exports = mongoose.model('User', userSchema);
+module.exports = mongoose.model('Lesson', userSchema);

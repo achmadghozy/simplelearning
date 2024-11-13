@@ -1,27 +1,22 @@
 const mongoose = require('mongoose');
 
-const enrollmentSchema = new mongoose.Schema({
+const studentSchema = new mongoose.Schema({
   student: {
     type: mongoose.Schema.ObjectId,
     ref: 'User',
     required: true
   },
-  course: {
+  course: [{
     type: mongoose.Schema.ObjectId,
     ref: 'Course',
-    required: true
-  },
-  enrolledAt: {
-    type: Date,
-    default: Date.now
-  },
+  }],
   progress: {
     type: Number,
     default: 0
   },
   completedLessons: [{
     type: mongoose.Schema.ObjectId,
-    ref: 'Lesson'
+    ref: 'Grades'
   }],
   status: {
     type: String,
@@ -30,4 +25,4 @@ const enrollmentSchema = new mongoose.Schema({
   }
 });
 
-module.exports = mongoose.model('Enrollment', enrollmentSchema);
+module.exports = mongoose.model('Student', studentSchema);
