@@ -29,6 +29,10 @@ const courseSchema = new mongoose.Schema({
     type: mongoose.Schema.ObjectId,
     ref: 'Student'
   }],
+  correctAnswer: {
+    type: [Number],
+    required: true
+  },
 }, {
   timestamps: true,
   toJSON: { virtuals: true },

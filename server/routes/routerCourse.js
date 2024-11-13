@@ -3,27 +3,22 @@ const router = express.Router();
 const { protect, authorize } = require('../middleware/auth');
 
 const {
-  getCourses,
+  postACourse,
+  getAllCourses,
   getCourse,
-  createCourse,
   updateCourse,
   deleteCourse,
-  enrollCourse
-} = require('../controllers/courseController');
+} = require('../controllers/controllerCourse');
 
 router
   .route('/')
-  .get(getCourses)
-  .post(protect, authorize('teacher', 'admin'), createCourse);
+  .get(getAllCourses)
+  .post(protect, authorize('teacher', 'admin'), postACourse);
 
 router
   .route('/:id')
   .get(getCourse)
   .put(protect, authorize('teacher', 'admin'), updateCourse)
   .delete(protect, authorize('teacher', 'admin'), deleteCourse);
-
-router
-  .route('/:id/enroll')
-  .post(protect, authorize('student'), enrollCourse);
 
 module.exports = router;
