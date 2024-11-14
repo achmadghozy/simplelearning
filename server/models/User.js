@@ -25,7 +25,7 @@ const userSchema = new mongoose.Schema({
   },
   dispPicture: {
     type: String,
-    required: true
+    required: false
   },
   password: {
     type: String,
@@ -46,4 +46,4 @@ userSchema.pre(`save`, async function(next) {
   this.password = await bcrypt.hash(this.password, salt);
 });
 
-module.exports = mongoose.model('Lesson', userSchema);
+module.exports = mongoose.model('User', userSchema);
