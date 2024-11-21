@@ -1,6 +1,7 @@
 const Courses = require("./models/Courses");
+const asyncHandler = require(`express-async-handler`)
 
-const postACourse = async (req, res) => {
+const postACourse = asyncHandler( async (req, res) => {
     try {
         const newCourse = await Courses({...req.Courses})
         await newCourse.save();
@@ -9,7 +10,7 @@ const postACourse = async (req, res) => {
         console.error("Error creating course",error);
         res.status(500).send({message:"Failed to create course"})
     }
-}
+});
 
 const getAllCourses = async (req,res) => {
     try{
@@ -53,7 +54,7 @@ const updateCourse = async (req, res) => {
 }
 
 const deleteCourse = async (req,res) => {
-    try{
+    try{ 
         const {id} = req.params;
         const deleteCourse = await Courses.findByIdAndDelete(id);
         if(!deleteCourse){

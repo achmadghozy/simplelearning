@@ -19,7 +19,7 @@ const gradeSchema = new mongoose.Schema({
         type: [Number],
         required: true
     },
-    updateAt: {
+    updatedAt: {
         type: timestamps,
         default: Date.now
     },
