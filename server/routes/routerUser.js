@@ -7,8 +7,8 @@ const {
   updateUserProfile,
   deleteUser,
   getUsers
-} = require('../controllers/userController');
-const { protect, admin } = require('../middleware/authMiddleware');
+} = require('../controllers/controllerUser');
+const { protect, admin } = require('../middleware/auth');
 
 router.route('/').post(registerUser).get(protect, admin, getUsers);
 router.post('/login', loginUser);

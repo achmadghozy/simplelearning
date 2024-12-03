@@ -26,7 +26,7 @@ const getCourse = async (req, res) => {
     try{
         const {id} = req.params;
         const course = await Courses.findById(id);
-        if(!course){
+        if(!course){ 
             res.status(404).send({message:`Course did not exist`})
         }
         res.status(200).send(course)
